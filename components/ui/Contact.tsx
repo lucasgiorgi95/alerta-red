@@ -31,7 +31,7 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Teléfono",
-      content: "(03544) 42-0000",
+      content: "(266) 423266",
       subcontent: "Emergencias: 0800-123-456"
     },
     {
@@ -43,7 +43,7 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Ubicación",
-      content: "Villa Dolores, Córdoba",
+      content: "San luis",
       subcontent: "Argentina"
     },
     {
@@ -227,25 +227,6 @@ const Contact = () => {
                   <p className="text-sm text-gray-600 font-inter">{info.subcontent}</p>
                 </motion.div>
               ))}
-            </div>
-
-            {/* Response Time Card */}
-            <div className="bg-[#1F3C73] rounded-xl p-6 text-white">
-              <h3 className="text-xl font-bold mb-4 font-montserrat">Tiempo de Respuesta</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="font-inter">Emergencias:</span>
-                  <span className="font-bold font-montserrat">&lt; 5 min</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="font-inter">Consultas:</span>
-                  <span className="font-bold font-montserrat">&lt; 2 horas</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="font-inter">Cotizaciones:</span>
-                  <span className="font-bold font-montserrat">&lt; 24 horas</span>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>

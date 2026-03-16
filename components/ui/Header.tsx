@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Phone, Shield } from 'lucide-react';
+import { Menu, X, Phone, Shield, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import Button from './Button';
 
@@ -13,7 +13,6 @@ const Header = () => {
     { name: 'Inicio', href: '/' },
     { name: 'Servicios', href: '/servicios' },
     { name: 'Sobre Nosotros', href: '/sobre-nosotros' },
-    { name: 'Contacto', href: '/#contact' },
   ];
 
   return (
@@ -50,14 +49,22 @@ const Header = () => {
               </Link>
             ))}
             <div className="flex items-center space-x-2">
-              <Phone className="h-4 w-4 text-[#B32025]" />
+              <MapPin className="h-4 w-4 text-[#B32025]" />
               <span className="text-sm font-medium text-gray-700 font-inter">
-                (03544) 42-0000
+                Ahora en San Luis
               </span>
             </div>
-            <Button size="sm" variant="primary">
-              Contacto
-            </Button>
+            <div className="flex items-center space-x-2">
+              <Phone className="h-4 w-4 text-[#B32025]" />
+              <span className="text-sm font-medium text-gray-700 font-inter">
+                266423266
+              </span>
+            </div>
+            <Link href="/#contact">
+              <Button size="sm" variant="primary">
+                Contacto
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -95,14 +102,22 @@ const Header = () => {
                 </Link>
               ))}
               <div className="flex items-center space-x-2 pt-2">
-                <Phone className="h-4 w-4 text-[#B32025]" />
+                <MapPin className="h-4 w-4 text-[#B32025]" />
                 <span className="text-sm font-medium text-gray-700 font-inter">
-                  (03544) 42-0000
+                  Ahora en San Luis
                 </span>
               </div>
-              <Button size="sm" variant="primary" className="w-full">
-                Contacto
-              </Button>
+              <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4 text-[#B32025]" />
+                <span className="text-sm font-medium text-gray-700 font-inter">
+                  266423266
+                </span>
+              </div>
+              <Link href="/#contact" className="w-full">
+                <Button size="sm" variant="primary" className="w-full">
+                  Contacto
+                </Button>
+              </Link>
             </div>
           </motion.div>
         )}

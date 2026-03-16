@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Button from './Button';
 
 const Hero = () => {
@@ -47,7 +48,7 @@ const Hero = () => {
               Seguridad Privada 
               <span className="text-[#B32025]"> Profesional</span>
               <br />
-              en Villa Dolores
+              en San Luis
             </motion.h1>
 
             <motion.p
@@ -68,16 +69,21 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <Button size="lg" variant="primary">
-                Solicitar Cotización
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="bg-white/20 backdrop-blur-md border border-white/40 shadow-xl text-white hover:bg-white/30 hover:border-white/50 transition-all duration-300"
-              >
-                Ver Servicios
-              </Button>
+              
+              <Link href="/#contact">
+                <Button size="lg" variant="primary">
+                  Solicitar Cotización
+                </Button>
+              </Link>
+              <Link href="/servicios">
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="bg-white/20 backdrop-blur-md border border-white/40 shadow-xl text-white hover:bg-white/30 hover:border-white/50 transition-all duration-300"
+                >
+                  Ver Servicios
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>

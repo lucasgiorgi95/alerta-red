@@ -94,7 +94,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-[#B32025] mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 font-inter">(03544) 42-0000</p>
+                  <p className="text-gray-300 font-inter">(266) 423266</p>
                   <p className="text-gray-300 font-inter">Emergencias: 0800-123-456</p>
                 </div>
               </div>
@@ -105,7 +105,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-[#B32025] mt-1 flex-shrink-0" />
                 <p className="text-gray-300 font-inter">
-                  Villa Dolores, Córdoba<br />
+                  San Luis<br />
                   Argentina
                 </p>
               </div>

@@ -11,7 +11,7 @@ const About = () => {
     {
       year: "1998",
       title: "Fundación",
-      description: "Iniciamos nuestras operaciones en Villa Dolores con un equipo de 5 especialistas."
+      description: "Iniciamos nuestras operaciones en San Luis con un equipo de 5 especialistas."
     },
     {
       year: "2005",
