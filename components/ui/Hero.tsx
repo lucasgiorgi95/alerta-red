@@ -58,9 +58,9 @@ const Hero = () => {
               className="text-lg text-white/95 mb-8 font-inter leading-relaxed drop-shadow-lg"
               style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}
             >
-              Líderes en seguridad privada con más de 25 años de experiencia. 
-              Ofrecemos soluciones integrales de monitoreo, vigilancia y tecnología 
-              de última generación para proteger lo que más importa.
+              <span className="text-[#B32025] font-semibold">Especialistas en vigilancia en barrios privados, comercios, eventos y más.</span><br />
+              Con más de 25 años de experiencia, ofrecemos soluciones integrales de monitoreo, 
+              vigilancia y tecnología de última generación para proteger lo que más importa.
             </motion.p>
 
             <motion.div

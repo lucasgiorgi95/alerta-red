@@ -3,14 +3,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Camera, Shield, Monitor, AlertTriangle, Users, Lock, ArrowLeft, CheckCircle } from 'lucide-react';
+import Image from 'next/image';
 import Header from '@/components/ui/Header';
 import Footer from '@/components/ui/Footer';
+import FloatingButtons from '@/components/ui/FloatingButtons';
 import Button from '@/components/ui/Button';
 import Link from 'next/link';
 
 const ServiciosPage = () => {
   const services = [
     {
+      image: "/images/monitoreo.jpg",
       icon: <Monitor className="h-12 w-12" />,
       title: "Monitoreo 24/7",
       description: "Centro de monitoreo operativo las 24 horas del día con tecnología de última generación y respuesta inmediata.",
@@ -30,6 +33,7 @@ const ServiciosPage = () => {
       ]
     },
     {
+      image: "/images/camaras.jpg",
       icon: <Camera className="h-12 w-12" />,
       title: "Cámaras de Seguridad",
       description: "Instalación de sistemas de CCTV con alta definición, visión nocturna y conexión remota desde cualquier dispositivo.",
@@ -49,6 +53,7 @@ const ServiciosPage = () => {
       ]
     },
     {
+      image: "/images/vigilancia-provada.jpg",
       icon: <Shield className="h-12 w-12" />,
       title: "Vigilancia Privada",
       description: "Personal de seguridad altamente capacitado para protección de personas, bienes y instalaciones comerciales.",
@@ -68,6 +73,7 @@ const ServiciosPage = () => {
       ]
     },
     {
+      image: "/images/alarmas.jpg",
       icon: <AlertTriangle className="h-12 w-12" />,
       title: "Alarmas y Sensores",
       description: "Sistemas de detección de intrusos con sensores de movimiento, magnéticos y de humo conectados a nuestra central.",
@@ -87,6 +93,7 @@ const ServiciosPage = () => {
       ]
     },
     {
+      image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=800&q=80",
       icon: <Users className="h-12 w-12" />,
       title: "Control de Acceso",
       description: "Sistemas biométricos, tarjetas de acceso y control de visitantes para restringir el ingreso a áreas autorizadas.",
@@ -106,6 +113,7 @@ const ServiciosPage = () => {
       ]
     },
     {
+      image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80",
       icon: <Lock className="h-12 w-12" />,
       title: "Seguridad Electrónica",
       description: "Soluciones integrales de cerraduras inteligentes, candados electrónicos y sistemas de protección perimetral.",
@@ -172,19 +180,27 @@ const ServiciosPage = () => {
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl shadow-xl overflow-hidden"
               >
-                {/* Service Header */}
-                <div className="p-8 border-b border-gray-100">
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-16 h-16 bg-[#1F3C73]/10 rounded-lg flex items-center justify-center text-[#1F3C73]">
+                {/* Image Header */}
+                <div className="relative h-64 w-full overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                  <div className="absolute bottom-6 left-8 flex items-center space-x-4">
+                    <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center text-white">
                       {service.icon}
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-[#111827] mb-2 font-montserrat">
-                        {service.title}
-                      </h3>
-                    </div>
+                    <h3 className="text-3xl font-bold text-white font-montserrat">
+                      {service.title}
+                    </h3>
                   </div>
-                  
+                </div>
+
+                {/* Service Description */}
+                <div className="p-8 border-b border-gray-100">
                   <p className="text-gray-600 font-inter leading-relaxed">
                     {service.description}
                   </p>
@@ -255,6 +271,7 @@ const ServiciosPage = () => {
       </section>
 
       <Footer />
+      <FloatingButtons />
     </div>
   );
 };

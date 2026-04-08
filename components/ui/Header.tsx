@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Phone, Shield, MapPin } from 'lucide-react';
+import { Menu, X, Phone, MapPin } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Button from './Button';
 
 const Header = () => {
@@ -21,12 +22,18 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <motion.div 
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-3"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Shield className="h-8 w-8 text-[#1F3C73]" />
+            <Image
+              src="/images/3.png"
+              alt="Alerta Red Seguridad Privada"
+              width={64}
+              height={64}
+              className="h-16 w-16"
+            />
             <div>
               <h1 className="text-xl font-bold text-[#1F3C73] font-montserrat">
                 Alerta Red

@@ -1,43 +1,43 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Camera, Shield, Monitor, AlertTriangle, Users, Lock } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Services = () => {
   const services = [
     {
-      icon: <Monitor className="h-8 w-8" />,
+      image: "/images/monitoreo.jpg",
       title: "Monitoreo 24/7",
       description: "Centro de monitoreo operativo las 24 horas con tecnología de última generación.",
       features: ["Vigilancia continua", "Respuesta inmediata", "Grabación digital", "Notificaciones automáticas"]
     },
     {
-      icon: <Camera className="h-8 w-8" />,
+      image: "/images/camaras.jpg",
       title: "Cámaras de Seguridad",
       description: "Instalación de sistemas de CCTV con alta definición y conexión remota.",
       features: ["HD y 4K", "Visión nocturna", "Acceso remoto", "Inteligencia artificial"]
     },
     {
-      icon: <Shield className="h-8 w-8" />,
+      image: "/images/vigilancia-provada.jpg",
       title: "Vigilancia Privada",
       description: "Personal de seguridad capacitado para protección de personas y bienes.",
       features: ["Personal capacitado", "Patrullaje móvil", "Control de acceso", "Escoltas"]
     },
     {
-      icon: <AlertTriangle className="h-8 w-8" />,
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
       title: "Alarmas y Sensores",
       description: "Sistemas de detección conectados a nuestra central de monitoreo.",
       features: ["Sensores de movimiento", "Detectores de humo", "Pánico médico", "Monitoreo remoto"]
     },
     {
-      icon: <Users className="h-8 w-8" />,
+      image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80",
       title: "Control de Acceso",
       description: "Sistemas biométricos y tarjetas para restringir el ingreso a áreas autorizadas.",
       features: ["Biométricos", "Tarjetas RFID", "Control de visitantes", "Reportes de acceso"]
     },
     {
-      icon: <Lock className="h-8 w-8" />,
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
       title: "Seguridad Electrónica",
       description: "Soluciones integrales de cerraduras inteligentes y protección perimetral.",
       features: ["Cerraduras inteligentes", "Cercas eléctricas", "Barreras infrarrojas", "Automatización"]
@@ -73,24 +73,29 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+              className="bg-white rounded-xl shadow-lg overflow-hidden group"
             >
-              {/* Icon */}
-              <div className="p-6 pb-4">
-                <div className="w-16 h-16 bg-[#1F3C73]/10 rounded-lg flex items-center justify-center text-[#1F3C73] mx-auto mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-[#111827] mb-3 font-montserrat text-center">
+              {/* Image Header */}
+              <div className="relative h-48 w-full overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <h3 className="absolute bottom-4 left-6 text-2xl font-semibold text-white font-montserrat">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 font-inter leading-relaxed text-center">
-                  {service.description}
-                </p>
               </div>
               
-              {/* Features */}
-              <div className="px-6 pb-6">
+              {/* Content */}
+              <div className="p-6">
+                <p className="text-gray-600 font-inter leading-relaxed mb-4">
+                  {service.description}
+                </p>
+                
+                {/* Features */}
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-2">

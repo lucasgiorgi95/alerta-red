@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Users, Clock, Award, Target, CheckCircle, Camera, Building } from 'lucide-react';
+import { Shield, Users, Clock, Award, Target, CheckCircle, Camera, Building, BookOpen, Lightbulb, Heart, TrendingUp } from 'lucide-react';
 import Header from '@/components/ui/Header';
 import Footer from '@/components/ui/Footer';
 import FloatingButtons from '@/components/ui/FloatingButtons';
@@ -56,7 +56,7 @@ const AboutPage = () => {
             className="max-w-6xl mx-auto"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Imagen Izquierda */}
+              {/* Icono Izquierda */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -64,14 +64,10 @@ const AboutPage = () => {
                 viewport={{ once: true }}
                 className="order-2 lg:order-1"
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <div 
-                    className="w-full h-64 bg-cover bg-center"
-                    style={{
-                      backgroundImage: `url("https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")`
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="relative rounded-2xl bg-gradient-to-br from-[#1F3C73] to-[#162C55] h-64 flex items-center justify-center shadow-xl">
+                  <div className="w-40 h-40 rounded-full bg-white/10 flex items-center justify-center">
+                    <Building className="w-20 h-20 text-white" strokeWidth={1.5} />
+                  </div>
                 </div>
               </motion.div>
               
@@ -138,21 +134,17 @@ const AboutPage = () => {
                 </p>
               </motion.div>
               
-              {/* Imagen Derecha */}
+              {/* Icono Derecha */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <div 
-                    className="w-full h-64 bg-cover bg-center"
-                    style={{
-                      backgroundImage: `url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")`
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="relative rounded-2xl bg-gradient-to-br from-[#B32025] to-[#8B1820] h-64 flex items-center justify-center shadow-xl">
+                  <div className="w-40 h-40 rounded-full bg-white/10 flex items-center justify-center">
+                    <BookOpen className="w-20 h-20 text-white" strokeWidth={1.5} />
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -170,7 +162,7 @@ const AboutPage = () => {
             className="max-w-6xl mx-auto"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Imagen Izquierda */}
+              {/* Icono Izquierda */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -178,14 +170,10 @@ const AboutPage = () => {
                 viewport={{ once: true }}
                 className="order-2 lg:order-1"
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <div 
-                    className="w-full h-64 bg-cover bg-center"
-                    style={{
-                      backgroundImage: `url("https://images.unsplash.com/photo-1551836022-de5d764ab25f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")`
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="relative rounded-2xl bg-gradient-to-br from-[#1F3C73] to-[#162C55] h-64 flex items-center justify-center shadow-xl">
+                  <div className="w-40 h-40 rounded-full bg-white/10 flex items-center justify-center">
+                    <Award className="w-20 h-20 text-white" strokeWidth={1.5} />
+                  </div>
                 </div>
               </motion.div>
               
@@ -251,21 +239,17 @@ const AboutPage = () => {
                 </p>
               </motion.div>
               
-              {/* Imagen Derecha */}
+              {/* Icono Derecha */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <div 
-                    className="w-full h-64 bg-cover bg-center"
-                    style={{
-                      backgroundImage: `url("https://images.unsplash.com/photo-1559028012-7d84c82120f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")`
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="relative rounded-2xl bg-gradient-to-br from-[#B32025] to-[#8B1820] h-64 flex items-center justify-center shadow-xl">
+                  <div className="w-40 h-40 rounded-full bg-white/10 flex items-center justify-center">
+                    <Shield className="w-20 h-20 text-white" strokeWidth={1.5} />
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -283,7 +267,7 @@ const AboutPage = () => {
             className="max-w-6xl mx-auto"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Imagen Izquierda */}
+              {/* Icono Izquierda */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -291,14 +275,10 @@ const AboutPage = () => {
                 viewport={{ once: true }}
                 className="order-2 lg:order-1"
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <div 
-                    className="w-full h-64 bg-cover bg-center"
-                    style={{
-                      backgroundImage: `url("https://images.unsplash.com/photo-1609874816352-cd13c5ea5b59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")`
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="relative rounded-2xl bg-gradient-to-br from-[#1F3C73] to-[#162C55] h-64 flex items-center justify-center shadow-xl">
+                  <div className="w-40 h-40 rounded-full bg-white/10 flex items-center justify-center">
+                    <Users className="w-20 h-20 text-white" strokeWidth={1.5} />
+                  </div>
                 </div>
               </motion.div>
               
@@ -349,92 +329,6 @@ const AboutPage = () => {
                 </div>
               </motion.div>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Equipo Directivo */}
-      <section className="py-16 bg-[#F5F6F8]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4 font-montserrat">
-              Nuestro <span className="text-[#B32025]">Equipo Directivo</span>
-            </h2>
-            <p className="text-lg text-gray-600 font-inter max-w-3xl mx-auto">
-              Liderazgo con más de 25 años de experiencia en el sector de la seguridad privada
-            </p>
-          </motion.div>
-
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Juan Carlos Martínez",
-                position: "Director General",
-                description: "Fundador de Alerta Red con más de 25 años de experiencia en seguridad privada. Experto en estrategias de protección y gestión de riesgos.",
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
-              },
-              {
-                name: "María González",
-                position: "Directora de Operaciones",
-                description: "Especialista en logística y coordinación de equipos de seguridad. Responsable de la planificación y ejecución de servicios.",
-                image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
-              },
-              {
-                name: "Roberto Silva",
-                position: "Jefe de Capacitación",
-                description: "Experto en formación y estándares de seguridad. Diseña los programas de capacitación y protocolos de actuación.",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
-              }
-            ].map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="relative h-64">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#111827] mb-1 font-montserrat">
-                    {member.name}
-                  </h3>
-                  <p className="text-[#B32025] font-semibold mb-3 font-inter">
-                    {member.position}
-                  </p>
-                  <p className="text-gray-600 text-sm leading-relaxed font-inter">
-                    {member.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <Link href="/servicios">
-              <Button size="lg" variant="primary" className="bg-[#1F3C73] hover:bg-[#162C55]">
-                Conoce Nuestros Servicios
-              </Button>
-            </Link>
           </motion.div>
         </div>
       </section>
